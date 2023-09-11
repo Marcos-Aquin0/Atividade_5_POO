@@ -26,8 +26,11 @@ dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2)
 const twoDaysFromToday = new Date()
 twoDaysFromToday.setDate(twoDaysFromToday.getDate() + 3)
 
+const diaInicio = new Date()
+const diaRetorno = new Date()
+diaRetorno.setDate(diaRetorno.getDate() + 100)
 app.rentBike(bikeId, 'jose@mail.com', bike.disponibilidade)
-app.returnBike(bikeId, 'jose@mail.com')
+app.returnBike(bike, 'jose@mail.com', diaInicio, diaRetorno)
 
 
 

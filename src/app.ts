@@ -77,7 +77,7 @@ export class App {
         // data que começou, que devolveu, valor da diaria
         // const today = new Date()
         let valor 
-        valor = (diaRetorno - diaInicio) * bike.diaria
+        valor = (diaRetorno.getTime() / (1000*60*60*24) - diaInicio.getTime() / (1000*60*60*24)) * bike.diaria
         return valor
     }
 
